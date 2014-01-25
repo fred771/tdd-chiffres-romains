@@ -34,7 +34,8 @@ public class ConvEnDecimal extends Controller {
         
         if(formulaire_plein.hasErrors()) {
             return badRequest(form_sans.render(formulaire_plein));
-        } else {
+        } 
+        else {
 	    NombreRomain n = formulaire_plein.get();
             return ok(form_avec.render(form(NombreRomain.class), n.valeur, n.en_decimal()));
         }

@@ -38,11 +38,12 @@ public class ConvEnRomain extends Controller {
 	}
 	else if (n <= 0) {
 	    formulaire_plein.reject("valeur", "la valeur doit etre strictement positive");
-        }
+    }
         
         if (formulaire_plein.hasErrors()) {
             return badRequest(form_sans.render(formulaire_plein));
-        } else {
+        }
+        else {
 	    NombreDecimal d = formulaire_plein.get();
             return ok(form_avec.render(form(NombreDecimal.class), d.valeur, d.en_romain()));
         }
