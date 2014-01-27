@@ -46,7 +46,7 @@ public class ApplicationTest {
     	assert_en_romain(8,"VIII") ;
     }
 
-    @test
+    @Test
     public void romain_dizaines() {
     	assert_en_romain(10,"X") ;
     	// assert_en_romain(20,"XX") ;
